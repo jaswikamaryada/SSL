@@ -1,0 +1,187 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usetheme{Madrid}
+
+\setbeamertemplate{footline}{}
+\setbeamertemplate{itemize item}{\rule[0.3ex]{1ex}{1ex}}
+
+\newtheorem{Router}{Router}
+\newtheorem{Firewall}{Firewall}
+\newtheorem{Firewalls}{Firewalls}
+\newtheorem{Switch}{Switch}
+\newtheorem{Encryption}{Encryption}
+\newtheorem{VPN}{VPN}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\title{Basics of Computer Networking}
+\author{Jaswika Maryada \\
+          CS23BT013
+          }
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}{What is Computer Networking?}
+ Computer Networking is the practice of interconnecting computers
+ to share resources and exchange data. Networks can be as simple
+ as connecting two computers or as complex as the global Internet.
+\end{frame}
+\begin{frame}{Types of Networks}
+ Computer networks can be classified into different types based on
+ their size and purpose:
+    \begin{itemize}
+        \item \textbf{LAN} -Local Area Network, typically within a building or
+        
+ campus.
+        \item \textbf{VAN}- Wide Area Network, spanning large geographical
+        
+ areas.
+        \item \textbf{MAN}- Metropolitan Area Network, larger than LAN
+        
+        but smaller than WAN.
+ \end{itemize}
+\end{frame}
+\begin{frame}{Network Topologies}
+  Network topology refers to the layout of how devices are connected
+ in a network:
+  \begin{itemize}
+        \item \textbf{Bus Topology} -All devices share a single communication line.
+        \item \textbf{Star Topology}-  Devices are connected to a central hub.
+        \item \textbf{Ring Topology}- Devices form a closed loop.
+ \item \textbf{Mesh Topology}- Devices are interconnected with many
+ redundant connections.
+
+ \end{itemize}
+\end{frame}
+    \begin{frame}{Networking Layers}
+    The OSI model is divided into seven layers, which allows for
+ abstraction and modularity in networking.
+ \begin{itemize}
+     \item Physical Layer\pause
+     \item  Data Link Layer \pause
+     \item   Network Layer \pause
+     \item  Transport Layer \pause
+     \item  Session Layer \pause
+     \item  Presentation Layer\pause
+     \item  Application Layer
+ \end{itemize}
+\end{frame}
+\begin{frame}{Network Protocols Comparison}
+ Here’s  a comparison of some common 
+ networking protocols:
+ \vspace{0.2cm}
+ \centering
+     \vspace{0.5cm}
+ \begin{tabular}{|c|c|c|c|}
+     \hline
+     \textbf{Protocol} & \textbf{Layer} & \textbf{Use Case} & \textbf{Port Number} \\ \hline
+      HTTP & Application & Web Traffic & 80 \\
+      \hline
+       FTP & Application & File Transfer & 21 \\
+      \hline
+       TCP & Transport &  Reliable Data Transfer &  N/A \\
+      \hline
+     Ethernet & Data Link &    LANCommunication &  N/A \\
+      \hline
+      
+ \end{tabular}
+\end{frame}
+\begin{frame}{Data Transmission Formula}
+     The data transmission rate formula in networking is:
+     \[
+    \text{Data Rate} = \text{Bandwidth} \times \log_2{\left( 1 + \text{Signal-to-Noise Ratio} \right)}
+    \]
+ where:
+ \begin{itemize}
+     \item  Bandwidth is the maximum frequency range (in Hz).
+     \item  Signal-to-Noise Ratio(SNR)  is a measure of signal strength
+ relative to background noise.
+\end{itemize}
+\end{frame}
+\begin{frame}{Key Networking Components}
+   \begin{block}{Router}
+        A device that forwards data packets between networks
+   \end{block}
+    \begin{block}{Switch}
+    A device that connects devices within a LAN, managing data
+ transmission between them.
+    \end{block}
+    \begin{block}{Firewall}
+    A security system that monitors and controls network traffic based
+ on security rules.
+    \end{block}
+\end{frame}
+\begin{frame}{IP Addressing}
+    Each device in a network has a unique IP address for identification. IP addresses are of two main types:
+    
+   {IPv4}: \texttt{192.168.1.1} \hspace{0.2cm} {IPv6}: \texttt{2001:0db8:85a3:0000:0000:8a2e:0370:7334}
+
+    \\[1.5ex] 
+    IPv4 is widely used, but IPv6 addresses are becoming more common to accommodate more devices.
+\end{frame}
+\begin{frame}{OSI Model}
+    The OSI model defines a layered framework for how data is transmitted over networks:
+     \begin{itemize}
+        \item \textbf{Layer 1:Physical} -Hardware transmission (cables, signals).
+        \item \textbf{ Layer 2: Data Link}-  Error detection and frame control.
+        \item \textbf{ Layer 3: Network}- Routing of packets (e.g., IP).
+ \item \textbf{Layer 4: Transport}-  End-to-end communication (e.g.,TCP).
+\item \textbf{Layer 5-7}-  Session, Presentation, and Application layers.
+
+ \end{itemize}
+\end{frame}
+\begin{frame}{Sample Network Diagram}
+     \begin{center}
+        \includegraphics[width=0.6\textwidth]{network}
+       
+
+    \end{center}
+    \centering
+         Example layout of a small network with routers, switches, and
+     connected devices.
+\end{frame}
+\begin{frame}{Common Network Protocols}
+ \begin{itemize}
+        \item \textbf{ HTTP/HTTPS} - For web browsing and secure data
+ transmission
+        \item \textbf{FTP/SFTP}- For file transfers.
+        \item \textbf{SMTP}-  For sending emails.
+ \item \textbf{DNS}-  Domain Name System, for resolving domain names to
+ IP addresses.
+
+ \end{itemize}
+
+\end{frame}
+\begin{frame}{Network Security Basics}
+    \begin{block}{Encryption}
+Protects data by encoding it , making it accessible only to those
+ with the correct key
+    \end{block}
+    \begin{block}{Firewalls}
+        Monitors and controls incoming and out going network traffic based
+ on security policies.
+    \end{block}
+    \begin{block}{VPN}
+        A Virtual Private Network creates a secure connection over a
+ public network
+    \end{block}
+\end{frame}
+\begin{frame}{Conclusion}
+     Networking enables connectivity across devices and allows sharing
+ of resources. Understanding basic network types, topologies, and
+ security measures is essential for creating and maintaining effective
+ networks.
+
+\end{frame}
+\begin{frame}{Further Reading}
+    \begin{itemize}
+        \item \textbf{ Books} -  "Computer Networking: A Top-Down Approach" by
+ Kurose and Ross.
+        \item \textbf{Websites:}- Cisco Networking Academy, Network World.
+        \item \textbf{Courses: }-   “Introduction to Computer Networking” on
+ coursera
+
+ \end{itemize}
+\end{frame}
+\end{document}
